@@ -28,7 +28,7 @@ async function handleEmptyReq(res, db) {
     handleError(error);
   }
 
-  return res.send(response);
+  return res.send(responseData);
 }
 
 async function handleReqWithParams(req, res, db) {
