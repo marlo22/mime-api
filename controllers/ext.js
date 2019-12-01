@@ -4,7 +4,7 @@ const handleError = require('../helpers/handleError');
 
 const router = express.Router();
 
-const dbPromise = sqlite.open('./db.sqlite', { Promise });
+const dbPromise = sqlite.open('./db.sqlite', { Promise, cached: true });
 
 async function handleEmptyReq(res, db) {
   const responseData = {};
